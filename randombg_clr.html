@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Random Background color generator</title>
+	  <!--========fa fa icons======-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--=====google fonts========-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+<style type="text/css">
+	*
+	{
+		padding: 0;
+		margin: 0;
+
+	}
+	body,html
+	{
+		height: 100%;
+		font-family: 'Poppins';
+	}
+	div
+	{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	button
+	{
+		padding: 20px;
+		box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.37);
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		font-family: 'Poppins';
+		font-size: 20px;
+		border-radius: 20px 0px;
+	}
+</style>
+</head>
+<body>
+
+<div>
+	<button>Change Bg Color</button>
+	<br>
+	<p>Copy Color Code : </p>
+	<h2></h2>
+</div>
+
+<script type="text/javascript">
+	const button = document.querySelector("button");
+	const h2 = document.querySelector("h2");
+	const div = document.querySelector("div");
+    const hexClr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+
+    button.addEventListener("click", () => {	
+    let color = "#";
+    color += Math.random().toString(16).slice(2, 8).toUpperCase();
+
+    div.style.backgroundColor = color;
+    h2.innerText = color;
+  });
+</script>
+</body>
+</html>
